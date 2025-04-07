@@ -1,36 +1,456 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercedes</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Mercedes Benz</title>
+    <link rel="icon" type="image/x-icon" href="Images/orginal.jfif">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    
+
+
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="assets/img/logo_mercedes.png" alt="">
+<body> 
+  <div class="modal fade" tabindex="-1" id="booking-modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Booking for test drive</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="nav-links flx">
-            <li>Modèles</li>
-            <li>Achats</li>
-            <li>Services</li>
-            <li>Performance</li>
-            <li>Marque</li>
+        <div class="modal-body">
+            <form action="#">
+                <div class="row">
+                    <div class="col-sm-6">
+               <div class="form-floating">
+                <input type="email" id="email1" class="form-control" placeholder="Your email">
+                <label for="email1">Email address</label>
+               </div>
+            </div>
+        <div class="col-sm-6">
+               <div class="form-floating">
+                <select id="select1" class="form-select">
+                     <option></option>        
+                    <option>Bridgeway Motors LLP</option>
+                    <option>Coastals Private Limited!!</option>
+                    <option>Advaith Motors Private Limited</option>
+                    <option>Berkeley Motors Limited</option>
+                    <option>GlobalStar Auto LLP</option>
+                    
+                </select>
+                <label for="select1">Select dealer</label>
+               </div>
+            </div>
+            </div>
+                
+            </form>
+      
         </div>
-    </header>
-
-    <div class="banner">
-        <div class="txt-content">
-            <h1>Projet Boutique<br>
-            Mercedes</h1>
-
-            <button>WATCH CAR</button>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+          <a href="#"><button type="button" class="btn btn-outline-dark">Submit</button></a>
         </div>
-
-        <div class="bg">
-            <img src="assets/img/BG_Mercedes.webp" alt="">
-        </div>
+      </div>
     </div>
-</body>
+  </div>
+  <header style="position: fixed; width: 100%; z-index: 1; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; background: #000; height: 110px; overflow: hidden;">
+    <div class="row text-white h-100">
+      <div class="col-md-6 col-9 d-flex align-items-center ps-3">
+        <div>
+          <p style="font-size: 28px; margin-left: 30px;">Mercedes Benz</p>
+        </div>
+        <img src="Images/orginal.jfif" class="img-fluid ms-auto" style="width: 60px; margin-left: auto; margin-right: 15px;" alt="">
+      </div>
+  
+      <div class="col-md-6 col-3 d-flex align-items-center justify-content-end">
+        <nav class="navbar navbar-expand-lg navbar-dark w-100">
+          <div class="container-fluid">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+              <ul class="navbar-nav mb-2 mb-lg-0 text-end">
+                <li class="nav-item">
+                  <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#service-section">Nos véhicules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#faq">FAQ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#contact">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+    <section style="padding-top: 7em;background-color: #000;">
+      <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            
+              </div>
+          <div class="carousel-item active c-item">
+            <img src="Images/Mercedes_bg.webp" class="d-block w-100 c-img imag" alt="..." style="image-rendering: optimizeSpeed;">
+            <div class="carousel-caption top-0 mt-4 ">
+                <p class="fs-1 mt-5 ">La nouvelle Class-S</p>
+                <button class="btn btn-outline-light px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#booking-modal">Reserver un essaie</button>
+                <button class="btn btn-outline-dark px-4 py-2 fs-5 mt-5 ">Savoir plus</button>
+                
+              </div>
+          </div>
+          <div class="carousel-item c-item">
+            <img src="Images/Mercedes_Class-E.jpeg" class="d-block w-100 c-img imag" alt="...">
+            <div class="carousel-caption top-0 mt-4 ">
+                <p class="fs-1 mt-5">La nouvelle Class-E</p>
+                <button class="btn btn-outline-light px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#booking-modal">Reserver un essaie</button>
+                <button class="btn btn-outline-dark px-4 py-2 fs-5 mt-5 ">Savoir plus</button>
+              </div>
+          </div>
+          <div class="carousel-item c-item">
+            <img src="Images/Mercedes_EQG.jpg" class="d-block w-100 c-img imag" alt="...">
+            <div class="carousel-caption top-0 mt-4 ">
+                <p class="fs-1 mt-5">La game Electriques EQG</p>
+                <button class="btn btn-outline-light px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#booking-modal">Reserver un essaie</button>
+                <button class="btn btn-outline-dark px-4 py-2 fs-5 mt-5 ">Savoir plus</button>
+              </div>
+          </div>
+          <div class="carousel-item c-item">
+            <img src="Images/Mercedes_Class-C.webp" class="d-block w-100 c-img imag" alt="...">
+            <div class="carousel-caption top-0 mt-4 ">
+                <p class="fs-1 mt-5">La nouvelle Class-C</p>
+                <p class="fs-5 text-light">Le confort sportif</p>
+                <button class="btn btn-outline-light px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#booking-modal">Reserver un essaie</button>
+                <button class="btn btn-outline-dark px-4 py-2 fs-5 mt-5 ">Savoir plus</button>
+              </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      
+    </section>
+    <section class="p-5 pb-1 bg-black">
+      <div class="container mx-auto pb-5 g-2">
+          <h1 class="text-center text-white mt-2 pb-3 pb-1 g-1 " style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Nos recommendations</h1>
+          <div class="row">
+              <div class="col-md-4 ">
+                  <div class="card text-center pt-3 h-100 mb-2" >
+                    <img class="card-img-top" src="Images/Mercedes_CLE_Cabriolet.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h3 class="card-title" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Faite pour gagner</h3>
+                        <p class="card-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Mercedes-AMG Class-E 53 4MATIC+ Cabriolet</p>
+                        <a href="https://www.mercedes-benz.co.in/passengercars/mercedes-benz-cars/models/e-class/cabriolet-a238-fl/mercedes-amg.html"><button class="btn btn-dark">Explore E-cabriolet</button></a>
+                        <a href="#contact"><button class="btn btn-outline-dark">Nous contactez</button></a>
+  
+                      </div>
+                    </div> 
+              </div>
+              <div class="col-md-4" >
+                  <div class="card text-center pt-3 h-100">
+                    <img class="card-img-top" src="Images/Mercedes-GLB.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h3 class="card-title" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">La nouvelle GLB</h3>
+                        <p class="card-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Tout type de force</p>
+                        <a href="https://www.mercedes-benz.co.in/passengercars/models/suv/glb/overview.html"><button class="btn btn-dark">Explorer les GLB</button></a>
+                        <a href="#contact"><button class="btn btn-outline-dark">Nous contactez</button></a>
+                      </div>
+                    </div>
+              </div>
+              <div class="col-md-4" >
+                  <div class="card text-center pt-3 h-100">
+                    <img class="card-img-top" src="Images/Mercedes-Benz-Logo.png" alt="Card image cap">
+                          <div class="card-body">
+                        <h3 class="card-title" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Trouvez les bon produits pour votre Mercedes </h3>
+                        <p class="card-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif;" >Mercedes Shop</p>
+                        <a href="https://shop.mercedes-benz.com/en-in/connect"><button class="btn btn-dark">Acheter</button></a>
+                      </div>
+                    </div>
+              </div>
+            </section>
+    <section class="p-5 pb-2" >
+        <div class="container">
+          <div class="row pb-2">
+            <div class="col text-center ">
+            <h1 class="fs-1" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Nos véhicules</h1>
+            <div class="underline mx-auto mt-3 "></div>
+          
+          <button class="list active but mt-4" data-filter="all" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; background-color: #fff;" >All models</button>
+      
+          <button class="list but" data-filter="amg" style="background-color: #fff;"><img src="Images/amg2.png" class="amg1"></button>
+      
+          <button class="list but" data-filter="maybach" style="background-color: #fff;"><img src="Images/mayb.png" class="amg1"></button>
+        
+          <button class="list but" data-filter="mercedeseq" style="background-color: #fff;"><img src="Images/eq.png" class="amg1"></button>
+        
+        
+          <button class="list text-uppercase but" data-filter="newmodels" style="font-family: monospace; background-color: #fff;">new models</button>
+       
+      <p style="font-size: 25px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" class="fs-4 mt-4 ">Bodytype</p>
+      
+      <div class="bodyType">
+      <button class="list sep but bdtype" data-filter="limo" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bolder; background-color: #fff;"><img src="https://cdn-icons-png.flaticon.com/512/2736/2736753.png" style="width: 40px;">&nbsp; Limousine</button><br>
+      <button class="list sep but bdtype" data-filter="SUV" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bolder; background-color: #fff;"><img src="https://cdn-icons-png.flaticon.com/512/2736/2736781.png" style="width: 40px;">&nbsp; SUV Range</button><br>
+      <button class="list sep but bdtype" data-filter="hb" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bolder; background-color: #fff;"><img src="https://cdn-icons-png.flaticon.com/512/3202/3202146.png" style="width: 40px;">&nbsp; Hatchback</button><br>
+      <button class="list sep but bdtype" data-filter="rd" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bolder; background-color: #fff;"><img src="https://cdn-icons-png.flaticon.com/512/8177/8177742.png" style="width: 40px;">&nbsp; Roadster</button><br>
+
+      </div>
+       
+    
+      </section>
+    <section>
+      
+   
+      <div class="product">
+        <div class="container">
+          <div class="row pt-2">
+            <div class="card col-md-4 itemBox mercedeseq newmodels SUV">
+              <img src="Images/EQB.png" class="img1 veh" >
+              <h5>EQB</h5>
+              <p class="f-2 text-secondary">A partir de 60 000 €</p>
+            </div>
+            <div class="card col-md-4 itemBox mercedeseq SUV crd">
+              <img src="Images/EQC.png">
+              <h5>EQC</h5>
+              <p class="f-2 text-secondary">A partir de 109 450 €</p>
+            </div>
+            <div class="card col-md-4 itemBox amg SUV crd">
+              <img src="Images/GLA.png">
+              <h5>GLA</h5>
+              <p class="f-2 text-secondary">A partir de 51 150 €</p>
+            </div>
+          </div>
+          <div class="row pt-2">
+            <div class="card col-md-4 itemBox newmodels SUV crd">
+              <img src="Images/GLB.png">
+              <h5>GLB</h5>
+              <p class="f-2 text-secondary">A partir de 70 180 €</p>
+            </div>
+            <div class="card col-md-4 itemBox amg SUV crd">
+              <img src="Images/GLC.png">
+              <h5>GLC</h5>
+              <p class="f-2 text-secondary">A partir de 68 200 €</p>
+            </div>
+            <div class="card col-md-4 itemBox amg SUV crd">
+              <img src="Images/GLC-Coupé.png">
+              <h5>GLC-Coupe</h5>
+              <p class="f-2 text-secondary">A partir de 79 750 €</p>
+            </div>
+          </div>
+          <div class="row pt-2">
+            <div class="card col-md-4 itemBox amg SUV crd">
+              <img src="Images/GLE.png">
+              <h5>GLE</h5>
+              <p class="f-2 text-secondary">A partir de 96 800 €</p>
+            </div>
+            <div class="card col-md-4 itemBox amg SUV crd">
+              <img src="Images/GLE-Coupé.png">
+              <h5>GLE Coupe</h5>
+              <p class="f-2 text-secondary">A partir de 150 150 €</p>
+            </div>
+            <div class="card col-md-4 itemBox newmodels SUV crd">
+              <img src="Images/GLS.png">
+              <h5>GLS</h5>
+              <p class="f-2 text-secondary">A partir de 130 900 €</p>
+            </div>
+          </div>
+          <div class="row pt-2">
+            <div class="card col-md-4 itemBox maybach SUV crd">
+              <img src="Images/GLS-Maybach.png">
+              <h5>Mercedes-Maybach GLS</h5>
+              <p class="f-2 text-secondary">A partir de 211 200 €</p>
+            </div>
+            <div class="card col-md-4 itemBox amg SUV crd">
+              <img src="Images/Class-G.png">
+              <h5>G-Class</h5>
+              <p class="f-2 text-secondary">A partir de 189 200 €</p>
+            </div>
+            <div class="card col-md-4 itemBox limo crd">
+              <img src="Images/EQS.png">
+              <h5>EQS</h5>
+              <p class="f-2 text-secondary">A partir de 170 500 €</p>
+            </div>
+          </div>
+          <div class="row pt-2">
+            <div class="card col-md-4 itemBox limo crd">
+              <img src="Images/Class-A.png">
+              <h5>A-Class</h5>
+              <p class="f-2 text-secondary">A partir de 48 400 €</p>
+            </div>
+            <div class="card col-md-4 itemBox limo crd">
+              <img src="Images/Class-C.png">
+              <h5>C-Class</h5>
+              <p class="f-2 text-secondary">A partir de 62 920 €</p>
+            </div>
+            <div class="card col-md-4 itemBox limo crd">
+              <img src="Images/Class-S.png">
+              <h5>S-Class</h5>
+              <p class="f-2 text-secondary">A partir de 180 950 €</p>
+            </div>
+          </div>
+          <div class="row pt-2 pb-3">
+            <div class="card col-md-4 itemBox hb amg crd">
+              <img src="Images/Class-A45s.png">
+              <h5>A-Class Hatchback</h5>
+              <p class="f-2 text-secondary">A partir de 92 180 €</p>
+            </div>
+            <div class="card col-md-4 itemBox rd amg newmodels crd">
+              <img src="Images/Class-E-Cab.webp">
+              <h5>E-Class Cabriolet</h5>
+              <button class="btn btn-dark" style="border-radius: 20px;"><a href="https://www.mercedes-benz.co.in/passengercars/mercedes-benz-cars/models/e-class/cabriolet-a238-fl/mercedes-amg.html" style="text-decoration: none; color: #fff;"> New</a></button>
+            </div>
+            <div class="card col-md-4 itemBox limo maybach crd">
+              <img src="Images/Class-S-Maybach.png">
+              <h5>Mercedes-Maybach S-Class</h5>
+              <p class="f-2 text-secondary">A partir de 282 700 €</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+           
+      
+          
+       
+    </section>
+    <section id="faq" class="py-md-5 bg-black">
+      <h2 class="my-5 text-center text-white">FAQ</h2>
+      <div class="container">
+      <div class="accordion mx-auto w-75 pb-5" id="accordionExample">
+          <div class="accordion-item bg-black">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                I'd like a quote to settle my agreement early
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-white">
+                If you have an Agility (Personal Contract Plan) agreement and want to own your vehicle outright before your agreement is due to end, we can give you a settlement quote. It'll only be valid for a short time, so make sure you check the expiry date. If you have one of our other finance products, please get in touch with your Retailer who will be able to give you more information.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item bg-black">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                I think I'm going to drive more miles this year than my contract allows me
+              </button>
+            </h2 >
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-white">
+                Your payments are based on the agreed annual permitted mileage in your finance agreement; if you go over this amount, there is an excess mileage fee which you’ll need to pay at the end of your agreement. There are more details about this on page 2 of your finance agreement.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item bg-black">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                I'm having problems registering for Mercedes me finance
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-white">
+                Call us on 0370 847 0700 to talk through any issues you’re having. You’ll need your agreement number and vehicle registration number to hand. We’ll also ask you to confirm your address for data protection.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col my-4">
+              <h1 class="fs-1 text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" id="contact">Contact Us</h1>
+              <form class="my-4">
+                <div class="row justify-content-center">
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control" placeholder="First name" required>
+                    <br>
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control" placeholder="Last name" required>
+                    <br>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="form-group col-md-4">
+                    <label for=""></label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for=""></label>
+                    <input type="tel" class="form-control" id="inputtel4" placeholder="Contact Number" required>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-outline-dark mt-4" style="margin-left: 47%;">Submit</button>
+              </div>
+              </form>
+            </div>
+          </div>
+      </section>
+
+      <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+
+    
+    <footer class="bg-black py-5 mt-5">
+      <div class="container text-light text-center">
+          <p class="display-5 mb-3">Mercedes Benz</p>
+          <small class="text-white-50">&copy; 2022. Mercedes-Benz AMG. All rights reserved</small>
+          <br>
+          <br>
+          <a href="https://www.facebook.com/MercedesBenz/"><i class="bi bi-facebook display-6" ></i></a>&nbsp;
+          <a href="https://twitter.com/MercedesBenz/"><i class="bi bi-twitter display-6"></i></a>&nbsp;
+          <a href="https://www.youtube.com/channel/UClj0L8WZrVydk5xKOscI6-A"><i class="bi bi-youtube display-6"></i></a>&nbsp;
+          <a href="https://www.instagram.com/mercedesbenz/?hl=en"><i class="bi bi-instagram display-6"></i></a>&nbsp;
+          <a href="https://www.linkedin.com/company/mercedes-benz_ag/"><i class="bi bi-linkedin display-6"></i></a>
+
+      </div>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/e89a67df44.js" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.list').click(function(){
+        const value=$(this).attr('data-filter');
+        if(value == "all"){
+            $('.itemBox').show('1000');
+        }else{
+            $('.itemBox').not('.'+value).hide('1000');
+            $('.itemBox').filter('.'+value).show('1000');
+            
+        }
+    })
+
+    $('.list').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+
+});
+</script>
+
 </html>
